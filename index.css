@@ -1,0 +1,56 @@
+body {
+  background-color: #5233FF;
+  color: #fff;
+  padding: 25px;
+  font-family: sans-serif;
+}
+
+td {
+    font-size: 13px;
+  }
+
+td, th, tbody {
+border: 1px solid black;
+padding: 10px 20px;
+}
+
+/* collapses the space between the boarders so they come together*/
+
+table {
+  border-collapse: collapse;
+}
+
+/*universal selector*/
+.universalselector {
+  color: darkblue;
+}
+
+/*attribute selector*/
+.attributeselector {
+  color: magenta;
+}
+
+/*pseudo class*/
+.pseudoclass {
+  color: orange;
+}
+  /*psudo class example*/
+  
+  a:hover {
+    color: orange;
+  }
+  
+  /*specify*/
+  #specifycolor {
+    color: yellow;
+  }
+
+  /*chaining*/
+  td.special {
+    color: purple;
+  }
+  
+  /*DESCENDANT COMBINATOR*/
+.decendantCombinator td {
+  color: pink;
+}

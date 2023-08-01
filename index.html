@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS REFERENCE</title>
+    <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
+</head>
+
+  <body>
+  <h1>html table reference</h1>
+  <h2>selectors</h2>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>attributes</th>
+      <th>syntax</th>
+      <th>explanation</th>
+      <th>exampmle</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <!-- UNIVERSAL SELECTOR -->
+    <tr class='universalselector'>
+      <td>universal selector</td>
+      <td>*</td>
+      <td>selects all elements of any type.</td>
+      <td>* {
+              color: blue; 
+              }
+      </td>
+    </tr> 
+
+<!---ATTRIBUTE SELECTOR--->
+  <tr class='attributeselector'>
+    <td>attribute selector</td>
+    <td>[attribute] {}</td>
+    <td>can be used to target HTML elements that already contain attributes. Elements of the same type can be targeted differently by their attribute or attribute value. This alleviates the need to add new code, like the class or id attributes.</td>
+    <td>[href] {
+      color: magneta;
+      }</td>
+      </tr>
+
+
+<!---TYPE/ATTRIBUTE VALUES--->
+  <tr>
+    <td>adding type and/or attribute values</td>
+    <td>[src*'winter']<br><br>
+    or [href*'winter']</td>
+    <td>Elements of the same type can be targeted differently by their attribute or attribute value</td>
+    <td>img src='/images/seasons/cold/winter.jpg'<br><br>
+
+css img[src*='winter'] { height: 50px; }<br><br>
+
+looks for an img element with an attribute of src that contains the string 'winter', and sets the height to 50px.</td>
+</tr>
+
+
+<!---PSEUDO CLASS-->
+  <tr class='pseudoclass'>
+    <td>pseudo class</td>
+    <td>:focus<br>
+    :visited<br>
+    :disabled<br>
+    :hover<br>
+    :active<br></td>
+    <td>psudo classes are for selecting elements in action. things such as when a link has been visted or its being hovered over</td>
+    <td><a href="https://www.google.com/">p:hover</a></td>
+    </tr>
+
+<!---SPECIFY--->
+<tr>
+  <td>specify</td>
+  <td>most specific<br>
+  id<br>
+  class<br>
+  type</td>
+  <td>Specificity is the order by which the browser decides which CSS styles will be displayed. A best practice in CSS is to style elements while using the lowest degree of specificity so that if an element needs a new style, it is easy to override.</td>
+    <td id='specifycolor'>p {
+      color: blue;
+      }<br><br>
+      .paragraphcolor {
+        color: purple;
+      }<br><br>
+      #paragraphcolor {
+        color: yellow;
+      }
+      </td>
+      </tr>
+
+    <!---CHAINING--->
+    <tr>
+      <td>chaining</td>
+      <td>(no spaces)<br><br>
+      element.class{}<br><br>
+      or element#id{}</td>
+      <td>When writing CSS rules, it’s possible to require an HTML element to have two or more CSS selectors at the same time. This is done by combining multiple selectors, which we will refer to as chaining</td>
+      <td class='special'>if there was a special class for td elements, the CSS would look like:<br><br>
+
+td.special {color: purple;}<br><br>
+
+(would only style a td element with a class of speical)</td>
+</tr>
+
+    <!---DESCENDANT COMBINATOR--->
+    <tr class='decendantCombinator'>
+      <td>descendant combinator</td>
+      <td>.class (SPACE) descendant selector {}</td>
+      <td>In addition to chaining selectors to select elements, CSS also supports selecting elements that are nested within other HTML elements, also known as descendants (can also be used for elements nested inside of other elements)</td>
+      <td>.descendantcombinator td {}</td>
+      </tr>
+
+      <!---MULTIPLE SELECTORS--->
+      <tr>
+        <td>multiple selectors</td>
+        <td>selecotr, second selector {}</td>
+        <td>In order to make CSS more concise, it’s possible to add CSS styles to multiple CSS selectors all at once. This prevents writing repetitive code. By separating the CSS selectors with a comma, both the elements will receive the styling.</td>
+        <td>h1, .menu {
+          font-family: georgia;
+          }</td>
+          </tr>
+        
+  </tbody>
+  </table>
+  </body>
+      
+</html>
